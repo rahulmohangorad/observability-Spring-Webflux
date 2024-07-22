@@ -1,6 +1,7 @@
 package com.kkh_chth.articles.observability.server.controller;
 
 import com.kkh_chth.articles.observability.server.bean.Article;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Slf4j
 public class ServerController {
 
     @GetMapping("/server/articles")
@@ -18,6 +20,10 @@ public class ServerController {
         alist.add(new Article(2,"Second Article"));
         alist.add(new Article(3,"Third Article"));
         alist.add(new Article(4,"Fourth Article"));
+       log.info("Article List : {}",alist);
+        log.error("TEST_ERROR :error log print");
+        log.debug("TEST_DEBUG :debug log print");
+        log.warn("TEST_WARN :warn log print");
         return Mono.just(alist);
     }
 }
