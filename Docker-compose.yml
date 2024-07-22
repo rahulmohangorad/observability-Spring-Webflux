@@ -18,6 +18,25 @@ services:
     depends_on:
       - collector
 
+  client-service:
+    build:
+      args:
+        GRADLE_PROJECT: :client
+        PROJECT_PATH: client
+    container_name: client-service
+    image: client-service
+    environment:
+      OTEL_SERVICE_NAME: "client-service"
+      OTEL_RESOURCE_ATTRIBUTES: "service=client-service,env=dev"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://collector:4317"
+      # Logs are disabled by default
+      OTEL_LOGS_EXPORTER: "otlp"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - collector
+      - server-service
+
   collector:
     container_name: collector
     image: otel/opentelemetry-collector-contrib:0.91.0

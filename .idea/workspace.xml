@@ -62,35 +62,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Practice/Observability/server/src/main/resources",
+    "last_opened_file_path": "C:/Practice/Observability/client/src/main/resources",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Practice\Observability\client\src\main\resources" />
       <recent name="C:\Practice\Observability\server\src\main\resources" />
       <recent name="C:\Practice\Observability" />
-      <recent name="C:\Practice\Observability\client\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Observability:server [build]">
-    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kkh_chth.articles.observability.server.ServerApplication" />
-      <module name="Observability.server.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kkh_chth.articles.observability.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Observability:client [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Docker.Docker-compose.yml.server-service: Compose Deployment">
+    <configuration name="C:/Practice/Observability [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -175,13 +162,30 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="Docker-compose.yml.server-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="server-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Docker-compose.yml.server-service: Compose Deployment" />
+        <item itemvalue="Gradle.C:/Practice/Observability [clean]" />
         <item itemvalue="Gradle.Observability:server [build]" />
         <item itemvalue="Gradle.Observability:server [clean]" />
         <item itemvalue="Gradle.Observability:server [buildNeeded]" />
-        <item itemvalue="Application.ServerApplication" />
-        <item itemvalue="Gradle.Observability:client [clean]" />
       </list>
     </recent_temporary>
   </component>

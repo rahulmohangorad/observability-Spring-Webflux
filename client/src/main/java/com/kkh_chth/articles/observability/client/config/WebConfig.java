@@ -14,7 +14,7 @@ public class WebConfig {
     @Bean
     WebClient webClient(ObjectMapper objectMapper) {
         return WebClient.builder()
-                .baseUrl("http://localhost:8081")
+                .baseUrl("http://localhost:8082")
                 .build();
     }
 
