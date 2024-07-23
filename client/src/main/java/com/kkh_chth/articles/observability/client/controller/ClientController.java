@@ -20,5 +20,9 @@ public class ClientController {
     public Mono<List<Article>> getArticleList(){
         return clientService.callServerForArticles();
     }
+    @GetMapping("/client/hello")
+    public Mono<String> helloClient(){
+        return Mono.just("hello Server");
+    }
 
 }
