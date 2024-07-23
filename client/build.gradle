@@ -16,13 +16,21 @@ java {
 repositories {
 	mavenCentral()
 }
-
+dependencyManagement {
+	imports {
+		mavenBom("io.opentelemetry:opentelemetry-bom:1.34.1")
+		mavenBom("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom-alpha:2.0.0-alpha")
+	}
+}
 dependencies {
+	implementation("io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter")
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {

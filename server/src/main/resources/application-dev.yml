@@ -16,6 +16,3 @@ otel:
       service: server-service
       env: dev
 
-#order:
-#  service:
-#    base-url: http://localhost:8080

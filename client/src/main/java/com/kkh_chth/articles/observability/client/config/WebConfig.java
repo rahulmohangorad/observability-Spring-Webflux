@@ -2,6 +2,7 @@ package com.kkh_chth.articles.observability.client.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kkh_chth.articles.observability.client.service.ArticleServer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -11,10 +12,13 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 @Configuration
 public class WebConfig {
 
+//    @Value("${article.service.base-url}")
+//    String webUrl;
+
     @Bean
-    WebClient webClient(ObjectMapper objectMapper) {
+    WebClient webClient(ObjectMapper objectMapper ) {
         return WebClient.builder()
-                .baseUrl("http://localhost:8082")
+                .baseUrl("http://server-service:8082")
                 .build();
     }
 
