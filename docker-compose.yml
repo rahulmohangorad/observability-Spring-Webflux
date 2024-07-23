@@ -14,7 +14,7 @@ services:
       # Logs are disabled by default
       OTEL_LOGS_EXPORTER: "otlp"
     ports:
-      - "8082:8082"
+      - "8082:8080"
     depends_on:
       - collector
 
@@ -32,7 +32,7 @@ services:
       # Logs are disabled by default
       OTEL_LOGS_EXPORTER: "otlp"
     ports:
-      - "8081:8081"
+      - "8081:8080"
     depends_on:
       - collector
       - server-service
@@ -50,8 +50,6 @@ services:
       - "8889" # Prometheus exporter metrics
     depends_on:
       - loki
-      - jaeger-all-in-one
-      - zipkin-all-in-one
       - tempo
 
   tempo:
@@ -99,23 +97,4 @@ services:
     depends_on:
       - prometheus
       - loki
-      - jaeger-all-in-one
-      - zipkin-all-in-one
       - tempo
-
-  jaeger-all-in-one:
-    container_name: jaeger
-    image: jaegertracing/all-in-one:latest
-    environment:
-      - COLLECTOR_OTLP_ENABLED=true
-    restart: always
-    ports:
-      - "16686:16686"
-      - "4317"
-
-  zipkin-all-in-one:
-    container_name: zipkin
-    image: openzipkin/zipkin:latest
-    restart: always
-    ports:
-      - "9411:9411"

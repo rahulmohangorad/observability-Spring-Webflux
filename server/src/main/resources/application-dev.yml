@@ -3,7 +3,7 @@ spring:
     name: server
 
 server:
-  port: 8082
+  port: 8080
 
 otel:
   exporter:
@@ -15,4 +15,3 @@ otel:
       service.name: server-service
       service: server-service
       env: dev
-

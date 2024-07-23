@@ -36,7 +36,7 @@ public class WebConfig {
     @Bean
     WebClient webClient(ObjectMapper objectMapper ,WebClient.Builder webclient) {
         return webclient
-                .baseUrl("http://server-service:8082")
+                .baseUrl("http://server-service:8080")
                 .build();
     }
 

@@ -3,7 +3,7 @@ spring:
     name: client
 
 server:
-  port: 8081
+  port: 8080
 
 otel:
   exporter:
@@ -15,7 +15,3 @@ otel:
       service.name: client-service
       service: client-service
       env: dev
-
-article:
-  service:
-    base-url: http://localhost:8082
